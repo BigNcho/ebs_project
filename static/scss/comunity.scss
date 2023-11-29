@@ -1,0 +1,231 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+};
+ul,
+ol,
+li {
+	list-style: none;
+};
+a {
+	text-decoration: none;
+};
+
+
+.all_section{
+    
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(131, 140, 195, 0.815);
+    position: relative;
+
+    .container{
+        width: 1480px;
+        height: 960px;
+        background-color: rgb(17,24,68);
+        border-radius: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        .gnb{
+            width: 10%;
+            height: 100%;
+            border-right: 2px solid rgb(37,43,86);
+            
+            .logo_image{
+                width: 100%;
+                height: 15%;
+                /* padding: 5px; */
+                margin-left: 5px;
+                margin-top: 5px;
+                border-radius: 10px;
+                img{
+                    height: 95%;
+                    width: 95%;
+                    border-radius: 20px;
+                }
+
+            }
+           >ul{
+            
+            width: 75%;
+            height: 40%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            top: 5%;
+            left: 20%;
+            justify-content: space-around;
+                >li{
+                    width: 100%;
+                    height: 10%;
+                    
+                    
+                    >a{
+                        position: relative;
+                        left: 14%;
+                        top: 10%;
+                    >i{
+                        font-size: 30px;
+                        color: #a6afbf;
+                    }
+                    
+                }
+                  
+                }
+                    li:nth-child(2) {
+                        
+                        >a>i{
+                            color: rgb(58,80,190);
+                        }
+                        
+                      }
+               }
+
+            }
+            .content{
+                width: 100%;
+                height: 100%;
+                .header{
+                    flex: 1;
+                    width: 100%;
+                    height: 10%;
+                    margin-top: 20px;
+                    display: flex;
+                    margin-bottom: 20px;
+                    .search_bar_div{
+                        width: 25%;
+                        height: 100%;
+                        position: relative;
+                        .search_bar{
+                            width: 80%;
+                            height: 30%;
+                            border-radius: 20px;
+                            position: relative;
+                            top: 64%;
+                            left: 14%;
+                            
+                        }
+                        >i{
+                            font-size: 19px;
+                            color: black;
+                            position: relative;
+                            top: 67%;
+                            left: -64%;
+                        }
+                    }
+                    >ul{
+                        width: 25%;
+                        height: 100%;
+                        display: flex;
+                        
+                        >li{
+                            width: 33%;
+                            height: 50%;
+                            list-style: none;
+                            position: relative;
+                            top: 50%;
+                            text-align: center;
+
+                           a{
+                                font-size: 15px;
+                                font-family: "Verdana";
+                                color: #FFFFFF;
+                                font-weight: bold;
+                           }
+                        }
+                        li:nth-child(1) {
+                               
+                                border-bottom: 5px solid rgb(58,80,190);
+                                >a{
+                                    color: rgb(58,80,190);;
+                                }
+                            
+                          }
+                        
+                    }
+
+    
+                }
+                .content_main{
+                    width: 100%;
+                    height: 85%;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    border-top: 2px solid rgb(37,43,86);
+                    z-index: 3;
+                    overflow: hidden;
+
+                    .top_content{
+                        width: 90%;
+                        height: 50%;
+                        
+                        display: flex;
+                        flex-direction: column;
+                    
+                        position: relative;
+                        left: 5%;
+                        .top_content_first{
+                            width: 98%;
+                            height: 50%;
+                            background-color: rgb(39,46,90);
+                            margin: 10px;
+                            
+                            border-radius: 15px;
+                            overflow: hidden;
+                        }
+                        .top_content_second{
+                            width: 98%;
+                            height: 50%;
+                            background-color: rgb(39,46,90);
+                            margin: 10px;
+                            
+                            border-radius: 15px;
+                        }
+                        
+                    }
+
+
+                    .bottom_content{
+                        width: 90%;
+                        height: 50%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-around;
+                        align-items: center;
+                        position: relative;
+                        left: 5%;
+                            .bottom_content_first{
+                                width: 25%;
+                                height: 90%;
+                                background-color: rgb(39,46,90);
+                                border-radius: 10px;
+
+                            }
+                            .bottom_content_second{
+                                width: 42%;
+                                height: 90%;
+                                background-color: rgb(39,46,90);
+                                border-radius: 10px;
+                            }
+                            .bottom_content_third{
+                                width: 25%;
+                                height: 90%;
+                                background-color: rgb(39,46,90);
+                                border-radius: 10px;
+
+                            }
+                        
+                    }
+                }
+            }
+            
+            
+
+        };
+
+}
