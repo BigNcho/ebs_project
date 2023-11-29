@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/chart.css?after">
+    <script src="https://kit.fontawesome.com/8c61d70daf.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="all_section">
+    <div class="container">
+        <nav class="gnb">
+            <div class="logo_image">
+                <img src="../../static/images/logo.png" class='logo'>
+            </div>
+            <ul>
+                <li><a href="{% url 'index' %}"><i class="fa-solid fa-house-chimney"></i></a></li>
+                <li><a href="{% url 'comunity' %}"><i class="fa-solid fa-message"></i></a></li>
+                <li><a href="{% url 'chart' %}"><i class="fa-solid fa-chart-simple"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-gear"></i></a></li>
+            </ul>
+            
+        </nav>
+        <section class="content">
+        <div class="header">
+            <div class="search_bar_div">
+                <select class="select_class">
+                    <option value='1'>one</option>
+                    <option value='2'>two</option>
+                    <option value='3'>three</option>
+                    <option value='4'>four</option>
+                    <option value='5'>five</option>
+                    <option value='6'>six</option>
+                    <option value='7'>seven</option>
+                </select>
+                
+            </div>
+            <div class="search_bar_div_second">
+                <select class="select_class_second">
+                    <option value='1'>one</option>
+                    <option value='2'>two</option>
+                    <option value='3'>three</option>
+                    <option value='4'>four</option>
+                    <option value='5'>five</option>
+                    <option value='6'>six</option>
+                    <option value='7'>seven</option>
+                </select>
+            </div>
+            
+            <ul>
+                <li><a href="#">TITLE 01</a></li>
+                <li><a href="#">TITLE 02</a></li>
+                <li><a href="#">TITLE 03</a></li>
+            </ul>
+        </div>
+        
+        <div class="content_main">
+            <div class="top_content">
+                <div class="top_content_first">
+                    <div id="plotly-bar-graph"></div>
+                </div>
+                <div class="top_content_second">
+                    <div id="plotly-line-graph"></div>
+                </div>
+            </div>
+            <div class="bottom_content">
+                <div class="bottom_content_first">
+                
+                    
+                </div>
+                <div class="bottom_content_second">
+                    <div id="plotly-pie-graph"></div>
+                </div>
+                
+                
+                <div class="bottom_content_third"></div>
+            </div>
+
+        </div>
+    </section>
+    </div>
+</div>
+
+<script>
+    // JSON 데이터를 파싱
+    let piegraphData = {{ pie_graph_json | safe }};
+    let bargraphData = {{ bar_graph_json | safe }};
+    let linegraphData = {{line_graph_json | safe}};
+    {% comment %} let dropoutData = {{drop_out_json | safe}}; {% endcomment %}
+
+    // Plotly 그래프를 그립니다.
+    Plotly.newPlot('plotly-pie-graph', piegraphData.data, piegraphData.layout);
+    Plotly.newPlot('plotly-bar-graph', bargraphData.data, bargraphData.layout);
+    Plotly.newPlot('plotly-line-graph', linegraphData.data, linegraphData.layout);
+    {% comment %} Plotly.newPlot('drop-out-graph', dropoutData.data, dropoutData.layout); {% endcomment %}
+    
+
+    {% comment %} // dropout 부분
+    let updatemenus = [
+    {
+        'buttons': [
+            {'label': 'Data 1', 'method': 'update', 'args': [{'y': [1, 2, 3, 4, 5]}]},
+            {'label': 'Data 2', 'method': 'update', 'args': [{'y': [5, 4, 3, 2, 1]}]}
+        ],
+        'direction': 'down',
+        'showactive': true,
+    }
+];
+
+    // Dropdown 메뉴를 버튼 부분만 표현
+    Plotly.newPlot('drop-out-buttons', [], {
+        updatemenus: updatemenus,
+        xaxis_title: 'X-axis',
+        yaxis_title: 'Y-axis',
+    }); {% endcomment %}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/comunity.css?after">
+    <script src="https://kit.fontawesome.com/8c61d70daf.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="all_section">
+    <div class="container">
+        <nav class="gnb">
+            <div class="logo_image">
+                <img src="../../static/images/logo.png" class='logo'>
+            </div>
+            <ul>
+                <li><a href="{% url 'index' %}"><i class="fa-solid fa-house-chimney"></i></a></li>
+                <li><a href="{% url 'comunity' %}"><i class="fa-solid fa-message"></i></a></li>
+                <li><a href="{% url 'chart' %}"><i class="fa-solid fa-chart-simple"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-gear"></i></a></li>
+            </ul>
+            
+        </nav>
+        <section class="content">
+        <div class="header">
+            <div class="search_bar_div">
+                <input class="search_bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </input>
+            </div>
+            
+            <ul>
+                <li><a href="#">TITLE 01</a></li>
+                <li><a href="#">TITLE 02</a></li>
+                <li><a href="#">TITLE 03</a></li>
+            </ul>
+        </div>
+        
+        <div class="content_main">
+            <div class="top_content">
+                <div class="top_content_first"></div>
+                <div class="top_content_second"></div>
+            </div>
+            <div class="bottom_content">
+                <div class="bottom_content_first"></div>
+                <div class="bottom_content_second"></div>
+                <div class="bottom_content_third"></div>
+            </div>
+
+        </div>
+    </section>
+    </div>
+</div>
+</body>
+</html>

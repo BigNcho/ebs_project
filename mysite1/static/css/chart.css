@@ -1,0 +1,210 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.all_section {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(131, 140, 195, 0.815);
+  position: relative;
+}
+.all_section .container {
+  width: 1480px;
+  height: 960px;
+  background-color: rgb(17, 24, 68);
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+.all_section .container .gnb {
+  width: 10%;
+  height: 100%;
+  border-right: 2px solid rgb(37, 43, 86);
+}
+.all_section .container .gnb .logo_image {
+  width: 100%;
+  height: 15%;
+  /* padding: 5px; */
+  margin-left: 5px;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+.all_section .container .gnb .logo_image img {
+  height: 95%;
+  width: 95%;
+  border-radius: 20px;
+}
+.all_section .container .gnb > ul {
+  width: 75%;
+  height: 40%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 5%;
+  left: 20%;
+  justify-content: space-around;
+}
+.all_section .container .gnb > ul > li {
+  width: 100%;
+  height: 10%;
+}
+.all_section .container .gnb > ul > li > a {
+  position: relative;
+  left: 14%;
+  top: 10%;
+}
+.all_section .container .gnb > ul > li > a > i {
+  font-size: 30px;
+  color: #a6afbf;
+}
+.all_section .container .gnb > ul li:nth-child(3) > a > i {
+  color: rgb(58, 80, 190);
+}
+.all_section .container .content {
+  width: 100%;
+  height: 100%;
+}
+.all_section .container .content .header {
+  flex: 1;
+  width: 100%;
+  height: 10%;
+  margin-top: 20px;
+  display: flex;
+  margin-bottom: 20px;
+}
+.all_section .container .content .header .search_bar_div {
+  width: 25%;
+  height: 100%;
+  position: relative;
+}
+.all_section .container .content .header .search_bar_div .select_class {
+  width: 80%;
+  height: 30%;
+  border-radius: 20px;
+  position: relative;
+  top: 64%;
+  left: 14%;
+  text-align: center;
+}
+.all_section .container .content .header .search_bar_div_second {
+  width: 25%;
+  height: 100%;
+  position: relative;
+}
+.all_section .container .content .header .search_bar_div_second .select_class_second {
+  width: 80%;
+  height: 30%;
+  border-radius: 20px;
+  position: relative;
+  top: 64%;
+  left: 14%;
+  text-align: center;
+}
+.all_section .container .content .header > ul {
+  width: 25%;
+  height: 100%;
+  display: flex;
+}
+.all_section .container .content .header > ul > li {
+  width: 33%;
+  height: 50%;
+  list-style: none;
+  position: relative;
+  top: 50%;
+  text-align: center;
+}
+.all_section .container .content .header > ul > li a {
+  font-size: 15px;
+  font-family: "Verdana";
+  color: #FFFFFF;
+  font-weight: bold;
+}
+.all_section .container .content .header > ul li:nth-child(1) {
+  border-bottom: 5px solid rgb(58, 80, 190);
+}
+.all_section .container .content .header > ul li:nth-child(1) > a {
+  color: rgb(58, 80, 190);
+}
+.all_section .container .content .content_main {
+  width: 100%;
+  height: 85%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-top: 2px solid rgb(37, 43, 86);
+  overflow: hidden;
+}
+.all_section .container .content .content_main .top_content {
+  width: 90%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 5%;
+}
+.all_section .container .content .content_main .top_content .top_content_first {
+  width: 98%;
+  height: 50%;
+  background-color: rgb(39, 46, 90);
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.all_section .container .content .content_main .top_content .top_content_second {
+  width: 98%;
+  height: 50%;
+  background-color: rgb(39, 46, 90);
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.all_section .container .content .content_main .bottom_content {
+  width: 90%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  left: 5%;
+}
+.all_section .container .content .content_main .bottom_content .bottom_content_first {
+  width: 25%;
+  height: 90%;
+  background-color: rgb(39, 46, 90);
+  border-radius: 10px;
+}
+.all_section .container .content .content_main .bottom_content .bottom_content_second {
+  width: 42%;
+  height: 90%;
+  background-color: rgb(39, 46, 90);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.all_section .container .content .content_main .bottom_content .bottom_content_second #plotly-graph {
+  width: 90%;
+  height: 90%;
+}
+.all_section .container .content .content_main .bottom_content .bottom_content_third {
+  width: 25%;
+  height: 90%;
+  background-color: rgb(39, 46, 90);
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=chart.css.map */
