@@ -39,6 +39,37 @@ def pie_graph():
     return  pie_graph_json
 
 
+def pie_graph2():
+    labels = ['Apple', 'Banana', 'Tomato', 'Strawberry', 'Melon']
+    values = [4500, 3000, 2500, 3500, 5000]
+    
+
+    trace = go.Pie(labels=labels, values=values, textinfo='label+value')
+
+
+    fig = go.Figure(data=[trace])
+    fig.update_layout(
+        title = "제목",
+    
+        autosize=True,
+        width=508.5,
+        height=366.3,
+        margin_l=10,
+        margin_r=10,
+        margin_b=10,
+        margin_t=10,
+        paper_bgcolor="rgb(39, 46, 90)",
+        xaxis=dict(tickfont=dict(color='white')),  # x축 라벨 색상 변경
+        yaxis=dict(tickfont=dict(color='white')),  # y축 라벨 색상 변경
+        legend=dict(font=dict(color='white'))
+        )
+   
+    pie_graph_json2 = to_json(fig)
+    # graph_json=fig.show()
+    # 그래프를 JSON 문자열로 변환
+    return  pie_graph_json2
+
+
 def bar_graph():
     months  = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul','Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     months = pd.date_range('2023-01-01', periods=12)
@@ -75,6 +106,42 @@ def bar_graph():
     
     return  bar_graph_json
 
+def comu_bar_graph():
+    months  = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul','Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    months = pd.date_range('2023-01-01', periods=12)
+    random_1 = np.random.randint(0, 100, 12)
+    random_2 = np.random.randint(0, 500, 12)
+
+    colors1 = ['indianred']*12
+    colors1[4]='crimson'
+    colors2 = ['lightsalmon']*12
+    colors2[4] = 'LightSkyBlue'
+    trace1 = go.Bar(x = months, y=random_1, name = 'random_1', marker_color =colors1)
+    trace2 = go.Bar(x = months, y=random_2, name = 'random_2', marker_color =colors2)
+
+    layout = go.Layout(xaxis_tickangle = -45,paper_bgcolor="rgb(39, 46, 90)",)
+
+    data = [trace1,trace2]
+
+    fig = go.Figure(data=data, layout=layout,)
+    fig.update_layout(
+        autosize=True,
+        width=847.5,
+        height=300.5,
+        margin_l=10,
+        margin_r=10,
+        margin_b=20,
+        margin_t=10,
+        plot_bgcolor="rgb(39, 46, 90)",
+        xaxis=dict(tickfont=dict(color='white')),  # x축 라벨 색상 변경
+        yaxis=dict(tickfont=dict(color='white')),  # y축 라벨 색상 변경
+        legend=dict(font=dict(color='white'))
+        )
+    
+    comu_bar_graph_json = to_json(fig)
+    
+    return  comu_bar_graph_json
+
 def line_graph():
     num = 50
 
@@ -102,12 +169,12 @@ def line_graph():
     fig.update_layout(
             
             autosize=True,
-            width=1186.5,
-            height=203.5,
+            width=1100.5,
+            height=243.5,
             margin_l=10,
             margin_r=10,
             margin_b=20,
-            margin_t=10,
+            margin_t=50,
             plot_bgcolor="rgb(39, 46, 90)",
             xaxis=dict(tickfont=dict(color='white')),  # x축 라벨 색상 변경
             yaxis=dict(tickfont=dict(color='white')),  # y축 라벨 색상 변경
