@@ -1,0 +1,19 @@
+시간	NNG
+너온편	NNG
+만점	NNG
+플래너	NNG
+1월	NNG
+2월	NNG
+3월	NNG
+4월	NNG
+5월	NNG
+6월	NNG
+7월	NNG
+8월	NNG
+9월	NNG
+10월	NNG
+11월	NNG
+12월	NNG
+공지 사항	NNG
+노래	NNG
+
